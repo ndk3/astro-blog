@@ -1,20 +1,22 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
-const pageTitle = "About Chuj Me"
+const pageTitle = "About Chuj Me";
 
 const identity = {
     firstName: "Twoja Stara",
     country: "Dupa",
     occupation: "Zapierdala",
     hobbies: ["Wódka", " Dziwki", " i Lasery"],
-}
+};
 
 const skills = ["Picie", "Jaranie", "Sranie po ścianie"];
 
-const happy = true; 
-const finished = false; 
-const goal = 3; 
+const happy = true;
+const finished = false;
+const goal = 3;
 
 const skillColor = "red";
 const fontWeight = "bold";
@@ -28,7 +30,7 @@ const textCase = "uppercase";
         <meta name="viewport" content="width-device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
-        <style define:vars={{skillColor, fontWeight, textCase}}>
+        <style define:vars={{ skillColor, fontWeight, textCase }}>
             h1 {
                 color: purple;
                 font-size: 4rem;
@@ -41,9 +43,7 @@ const textCase = "uppercase";
         </style>
     </head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+        <Header />
 
         <h1>My Astro Site</h1>
         <h1>{pageTitle}</h1>
@@ -61,17 +61,28 @@ const textCase = "uppercase";
         <p>Chuj dupa i kamieni kupa</p>
         <ul>
             <li>Jam jest {identity.firstName}</li>
-            <li>Brudna {identity.country} i w dodatku {identity.occupation}.</li>
-            {identity.hobbies.length >= 3 && 
-            <li>Ja lubieć {identity.hobbies}</li>
+            <li>
+                Brudna {identity.country} i w dodatku {identity.occupation}.
+            </li>
+            {
+                identity.hobbies.length >= 3 && (
+                    <li>Ja lubieć {identity.hobbies}</li>
+                )
             }
         </ul>
         <p>Żem jest dobry w:</p>
         <ul>
             {skills.map((skill) => <li class="skill">{skill}</li>)}
-        </ul>        
-            {happy && <p>I am happy to be learning Astro!</p>}
-            {finished && <p>I finished this tutorial!</p>}
-            {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days</p>}
+        </ul>
+        {happy && <p>I am happy to be learning Astro!</p>}
+        {finished && <p>I finished this tutorial!</p>}
+        {
+            goal === 3 ? (
+                <p>My goal is to finish in 3 days.</p>
+            ) : (
+                <p>My goal is not 3 days</p>
+            )
+        }
+        <Footer />
     </body>
 </html>
