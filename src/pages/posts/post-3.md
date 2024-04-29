@@ -1,5 +1,6 @@
 ---
-title: 'Mój zajebisty blog'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'Mój zajebisty blog 3'
 pubdate: 2024-04-15
 author: 'Twoja stara'
 description: 'Najbardziej dojebany blog w galaktyce'

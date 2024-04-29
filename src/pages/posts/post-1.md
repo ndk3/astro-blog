@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Mój zajebisty blog'
 pubdate: 2024-04-15
 author: 'Twoja stara'
@@ -8,7 +9,6 @@ image:
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-Published on: 2024-04-15
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
